@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #00ffaa;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glow-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #00ffaa;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.about, .skills, .services, .stack, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2.5rem;
+  color: #00ffaa;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+.image-upload img {
+  margin-top: 10px;
+  max-width: 200px;
+  border: 2px solid #00ffaa;
+  display: none;
+}
+
+.skills .skill {
+  margin: 15px auto;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.bar {
+  height: 10px;
+  background: #222;
+  border: 1px solid #00ffaa;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar.html::after { width: 95%; }
+.bar.css::after { width: 90%; }
+.bar.js::after { width: 85%; }
+.bar.python::after { width: 80%; }
+
+.bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background: #00ffaa;
+  animation: fill 2s ease-out forwards;
+}
+
+@keyframes fill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-box {
+  background: #111;
+  padding: 15px;
+  border: 1px solid #00ffaa;
+  border-radius: 8px;
+}
+
+.stack .tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  background-color: #000;
+  border: 1px solid #00ffaa;
+  color: #00ffaa;
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.buy-section {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between image and button */
+}
+
+.buy-image {
+  max-width: 300px;
+  width: 100%;
+  border: 2px solid #00ffaa;
+  border-radius: 10px;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #00ffaa;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #00ffaa, 0 0 40px #00ffaa inset;
+}
+
+.buy-button:hover {
+  background-color: #000;
+  color: #00ffaa;
+  box-shadow: 0 0 20px #00ffaa, 0 0 60px #00ffaa inset;
+}
+
